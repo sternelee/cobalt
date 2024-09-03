@@ -137,6 +137,11 @@
                 "share/:shareType/:id"
             ],
             "enabled": true
+        },
+        "xhslink": {
+            "alias": "xiaohongshu.com",
+            "patterns": ["A/:id"],
+            "enabled": true
         }
     }
 }

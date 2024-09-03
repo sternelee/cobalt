@@ -27,6 +27,7 @@ import dailymotion from "./services/dailymotion.js";
 import snapchat from "./services/snapchat.js";
 import loom from "./services/loom.js";
 import facebook from "./services/facebook.js";
+import xiaohongshu from "./services/xiaohongshu.js";
 
 let freebind;
 
@@ -204,6 +205,11 @@ export default async function(host, patternMatch, lang, obj) {
             case "facebook":
                 r = await facebook({
                     ...patternMatch
+                });
+                break;
+            case "xhslink":
+                r = await xiaohongshu({
+                    id: patternMatch.id,
                 });
                 break;
             default:
