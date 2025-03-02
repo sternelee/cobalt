@@ -1,4 +1,4 @@
 {
-    "button.next": "go to older changelog ({{ value }})",
-    "button.previous": "go to newer changelog ({{ value }})"
+    "button.next": "转到旧的更新日志 ({{ value }})",
+    "button.previous": "转到较新的更新日志 ({{ value }})"
 }

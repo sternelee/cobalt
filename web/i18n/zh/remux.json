@@ -1,8 +1,8 @@
 {
-    "bullet.purpose.title": "what does remux do?",
-    "bullet.purpose.description": "remux fixes any issues with the file container, such as missing time info. it helps increase compatibility with old software, such as vegas pro and windows media player.",
-    "bullet.explainer.title": "how does it work?",
-    "bullet.explainer.description": "remuxing takes existing codec data and copies it over to a new media container. it's lossless, media data doesn't get re-encoded.",
-    "bullet.privacy.title": "on-device processing",
-    "bullet.privacy.description": "cobalt remuxes files locally. files never leave your device, so processing is nearly instant."
+    "bullet.purpose.title": "remux 做什么？",
+    "bullet.purpose.description": "remux 修正文件容器中的任何问题，例如缺少时间信息。 它有助于增加与旧软件的兼容性，例如Vegas专业版和窗口媒体播放器。",
+    "bullet.explainer.title": "它是如何工作的？",
+    "bullet.explainer.description": "remuxing 将现有的编解码器数据复制到新的媒体容器中。这是无损的，媒体数据不会重新编码。",
+    "bullet.privacy.title": "设备内处理",
+    "bullet.privacy.description": "钴的 remuxes 本地文件。文件永远不会离开您的设备，所以处理接近瞬间。"
 }

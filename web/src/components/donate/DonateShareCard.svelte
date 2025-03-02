@@ -16,7 +16,7 @@
     import CobaltQr from "$components/icons/CobaltQR.svelte";
     import CopyIcon from "$components/misc/CopyIcon.svelte";
 
-    const cobaltUrl = "https://cobalt.tools/";
+    const cobaltUrl = "https://cobalt.leeapps.dev/";
 
     let copied = false;
 
@@ -104,7 +104,7 @@
         class="donate-card-subtitle share-footer-link"
         class:centered={expanded}
     >
-        cobalt.tools
+        cobalt.leeapps.dev
     </div>
 </DonateCardContainer>
 

@@ -18,10 +18,8 @@
 
     import { device, app } from "$lib/device";
     import currentTheme, { statusBarColors } from "$lib/state/theme";
-    import { turnstileCreated, turnstileEnabled } from "$lib/state/turnstile";
 
     import Sidebar from "$components/sidebar/Sidebar.svelte";
-    import Turnstile from "$components/misc/Turnstile.svelte";
     import NotchSticker from "$components/misc/NotchSticker.svelte";
     import DialogHolder from "$components/dialog/DialogHolder.svelte";
     import UpdateNotification from "$components/misc/UpdateNotification.svelte";
@@ -90,9 +88,6 @@
         <DialogHolder />
         <Sidebar />
         <div id="content">
-            {#if ($turnstileEnabled && $page.url.pathname === "/") || $turnstileCreated}
-                <Turnstile />
-            {/if}
             <slot></slot>
         </div>
     </div>

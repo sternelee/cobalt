@@ -130,7 +130,7 @@
     if you want to remove the community instance label,
     refer to the license first https://github.com/imputnet/cobalt/tree/main/web#license
 -->
-{#if env.DEFAULT_API || (!$page.url.host.endsWith(".cobalt.tools") && $page.url.host !== "cobalt.tools")}
+{#if env.DEFAULT_API || (!$page.url.host.endsWith(".cobalt.leeapps.dev") && $page.url.host !== "cobalt.leeapps.dev")}
     <div id="instance-label">
         {$t("save.label.community_instance")}
     </div>

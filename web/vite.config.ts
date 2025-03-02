@@ -4,6 +4,7 @@ import basicSSL from "@vitejs/plugin-basic-ssl";
 import { glob } from "glob";
 import mime from "mime";
 import { createSitemap } from 'svelte-sitemap/src/index'
+import { VitePWA } from "vite-plugin-pwa";
 
 import { cp, readdir, mkdir } from "node:fs/promises";
 import { createReadStream } from "node:fs";
@@ -82,7 +83,44 @@ export default defineConfig({
         sveltekit(),
         enableCOEP,
         exposeLibAV,
-        generateSitemap
+        generateSitemap,
+        VitePWA({
+            base: "/",
+            scope: "/",
+            includeAssets: ["favicon.ico"],
+            registerType: "autoUpdate",
+            manifest: {
+              name: "Cobalt 西瓜猫",
+              lang: "zh-cn",
+              short_name: "Cobalt",
+              background_color: "#f6f8fa",
+              theme_color: "#f6f8fa",
+              icons: [
+                {
+                  src: "/icons/maskable/192.png",
+                  sizes: "192x192",
+                  type: "image/png",
+                },
+                {
+                  src: "/icons/maskable/384.png",
+                  sizes: "384x384",
+                  type: "image/png",
+                },
+                {
+                  src: "/icons/maskable/512.png",
+                  sizes: "512x512",
+                  type: "image/png",
+                },
+              ],
+            },
+            disable: !!process.env.NETLIFY,
+            devOptions: {
+              enabled: true,
+            },
+                    workbox: {
+                        maximumFileSizeToCacheInBytes: 2097152 * 10
+                    }
+          }),
     ],
     build: {
         rollupOptions: {

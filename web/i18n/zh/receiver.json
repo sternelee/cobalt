@@ -1,5 +1,5 @@
 {
-    "title": "drag or select a file",
-    "title.drop": "drop the file here!",
-    "accept": "supported formats: {{ formats }}."
+    "title": "拖动或选择一个文件",
+    "title.drop": "将文件拖放到这里！",
+    "accept": "支持的格式：{{ formats }}。"
 }
