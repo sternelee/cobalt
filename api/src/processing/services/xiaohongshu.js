@@ -6,7 +6,7 @@ const https = (url) => {
     return url.replace(/^http:/i, 'https:');
 }
 
-export default async function ({ id, token, shareId, h265, isAudioOnly, dispatcher }, proxy) {
+export default async function ({ id, token, shareId, h265, isAudioOnly, dispatcher, alwaysProxy }) {
     let noteId = id;
     let xsecToken = token;
 
@@ -96,7 +96,7 @@ export default async function ({ id, token, shareId, h265, isAudioOnly, dispatch
     const picker = images.map((image, i) => {
         return {
             type: "photo",
-            url: proxy ? createStream({
+            url: alwaysProxy ? createStream({
                 service: "xiaohongshu",
                 type: "proxy",
                 url: https(image.urlDefault),

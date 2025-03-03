@@ -145,7 +145,7 @@ export default function({ r, host, audioFormat, isAudioOnly, isAudioMuted, disab
                 case "ok":
                 case "vk":
                 case "tiktok":
-                case "xiaohongshu":
+                // case "xiaohongshu":
                     params = { type: "proxy" };
                     break;
 
@@ -157,6 +157,7 @@ export default function({ r, host, audioFormat, isAudioOnly, isAudioMuted, disab
                 case "snapchat":
                 case "loom":
                 case "twitch":
+                case "xiaohongshu":
                     responseType = "redirect";
                     break;
             }

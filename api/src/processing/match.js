@@ -32,7 +32,7 @@ import xiaohongshu from "./services/xiaohongshu.js";
 
 let freebind;
 
-export default async function({ host, patternMatch, params }, proxy = true) {
+export default async function({ host, patternMatch, params }) {
     const { url } = params;
     assert(url instanceof URL);
     let dispatcher, requestIP;
@@ -246,7 +246,8 @@ export default async function({ host, patternMatch, params }, proxy = true) {
                     h265: params.tiktokH265,
                     isAudioOnly,
                     dispatcher,
-                }, proxy);
+                    alwaysProxy: params.alwaysProxy,
+                });
                 break;
 
             default:
