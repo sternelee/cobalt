@@ -255,7 +255,7 @@ export const runAPI = async (express, app, __dirname, isPrimary = true) => {
                 host: parsed.host,
                 patternMatch: parsed.patternMatch,
                 params: normalizedRequest,
-            });
+            }, request.proxy ?? true);
 
             res.status(result.status).json(result.body);
         } catch {

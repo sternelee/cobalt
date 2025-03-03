@@ -151,4 +151,7 @@ export default defineConfig({
     optimizeDeps: {
         exclude: [ "@imput/libav.js-remux-cli" ]
     },
+    preview: {
+        port: 9001,
+    },
 });
